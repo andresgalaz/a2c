@@ -1,0 +1,6 @@
+build/*
+build.xml
+cordova/node_modules/*
+**/*~
+**/*.DS_Store
+**/*.log
