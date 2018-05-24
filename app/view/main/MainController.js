@@ -18,6 +18,7 @@ Ext.define('A2C.view.main.MainController', {
     },
 
     onHeaderSelected: function (h, record) {
+        console.log(record);
         // var p = h.up('app-main');
         // if (h.getHeight() == p.getHeight()) {
         //     console.log('Horizontal');

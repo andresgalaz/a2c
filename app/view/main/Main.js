@@ -38,11 +38,11 @@ Ext.define('A2C.view.main.Main', {
             flex: 0
         },
         iconCls: 'fa-th-list'
-        // ,
-        // listeners: {
-        //     click: 'onHeaderSelected',
-        //     resize:'onHeaderResize'
-        // }
+         ,
+         listeners: {
+             click: 'onHeaderSelected',
+             resize:'onHeaderResize'
+         }
 
     },
 
