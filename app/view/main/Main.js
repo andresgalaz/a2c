@@ -37,18 +37,17 @@ Ext.define('A2C.view.main.Main', {
             },
             flex: 0
         },
-        iconCls: 'fa-th-list'
-         ,
-         listeners: {
-             click: 'onHeaderSelected',
-             resize:'onHeaderResize'
-         }
+        iconCls: 'fa-th-list',
+        listeners: {
+            click: 'onHeaderSelected',
+            resize: 'onHeaderResize'
+        }
 
     },
 
     tabBar: {
         flex: 1,
-        scrollable : 'horizontal',
+        scrollable: 'horizontal',
         layout: {
             align: 'stretch',
             overflowHandler: 'none'
@@ -90,23 +89,29 @@ Ext.define('A2C.view.main.Main', {
             xtype: 'mainlist'
         }]
     }, {
-        title: 'Users',
-        iconCls: 'fa-user',
+        title: 'Panel Dinámico',
+        url:'https://desa.snapcar.com.ar/wappTest/agv/panelDinamico.js',
+//        url:'agv/apnelDin.json',
+        iconCls: 'fa-cloud-download',
         bind: {
-            html: '{loremIpsum}'
+            html: '{cargandoForm}'
         }
     }, {
         title: 'Groups',
         iconCls: 'fa-users',
         bind: {
-            html: '{loremIpsum}'
+            html: '{cargandoForm}'
         }
     }, {
         title: 'Settings',
         iconCls: 'fa-cog',
         bind: {
-            html: '{loremIpsum}'
+            html: '{cargandoForm}'
         }
     }]
+,
+    listeners: {
+        tabchange: 'onTabChange'
+    }
 
 });

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue May 22 19:52:12 ART 2018
+#Thu May 31 21:32:34 ART 2018
 20.base=/Users/AGALAZ/workspace/a2c/cordova/platforms/android/app/build/intermediates/assets/debug
 143.base=/Users/AGALAZ/workspace/a2c/cordova/platforms/android/app/build/intermediates/assets/debug
 493.base=/Users/AGALAZ/workspace/a2c/cordova/platforms/android/app/build/intermediates/assets/debug

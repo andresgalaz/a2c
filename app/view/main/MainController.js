@@ -11,6 +11,28 @@ Ext.define('A2C.view.main.MainController', {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
 
+    onTabChange: function (sender) { //, newRecord, oldRecord, eOpts) {
+        var panel = sender.getActiveTab();
+        console.log(panel, panel.url);
+        if (panel.url == undefined || panel.bCargado) return;
+
+        Ext.Ajax.request({
+            url: panel.url,
+            method: 'post',
+            success: function (response, opts) {
+                var obj = Ext.decode(response.responseText);
+                console.log(opts);
+                panel.bCargado = true;
+                panel.setHtml(null);
+                panel.add(obj);
+            },
+            failure: function (response, opts) {
+                panel.setHtml('server-side failure with status code ' + response.status);
+            }
+        })
+
+    },
+
     onConfirm: function (choice) {
         if (choice === 'yes') {
             //
@@ -18,7 +40,7 @@ Ext.define('A2C.view.main.MainController', {
     },
 
     onHeaderSelected: function (h, record) {
-        console.log(record);
+        // console.log(record);
         // var p = h.up('app-main');
         // if (h.getHeight() == p.getHeight()) {
         //     console.log('Horizontal');

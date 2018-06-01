@@ -31,7 +31,7 @@
      *      ]
      */
     "requires": [
-        "font-awesome"
+        "font-awesome", "package-loader"
     ],
 
     /**
