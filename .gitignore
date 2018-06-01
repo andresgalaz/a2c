@@ -1,4 +1,5 @@
-build/**
+build/*
+cordova/platforms/android/app/build/*
 cordova/node_modules/*
 **/*~
 **/*.DS_Store
