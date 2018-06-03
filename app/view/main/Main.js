@@ -90,8 +90,7 @@ Ext.define('A2C.view.main.Main', {
         }]
     }, {
         title: 'Panel Dinámico',
-        url:'https://desa.snapcar.com.ar/wappTest/agv/panelDinamico.js',
-//        url:'agv/apnelDin.json',
+        url: 'agv/panelDinamico.js',
         iconCls: 'fa-cloud-download',
         bind: {
             html: '{cargandoForm}'
@@ -108,8 +107,7 @@ Ext.define('A2C.view.main.Main', {
         bind: {
             html: '{cargandoForm}'
         }
-    }]
-,
+    }],
     listeners: {
         tabchange: 'onTabChange'
     }

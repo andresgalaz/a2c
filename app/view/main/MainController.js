@@ -14,10 +14,29 @@ Ext.define('A2C.view.main.MainController', {
     onTabChange: function (sender) { //, newRecord, oldRecord, eOpts) {
         var panel = sender.getActiveTab();
         console.log(panel, panel.url);
+
+        var geo = Ext.create('Ext.util.Geolocation', {
+            autoUpdate: false,
+            listeners: {
+                locationupdate: function(geo) {
+                    alert('New latitude: ' + geo.getLatitude());
+                },
+                locationerror: function(geo, bTimeout, bPermissionDenied, bLocationUnavailable, message) {
+                    if(bTimeout){
+                        alert('Timeout occurred.');
+                    } else {
+                        alert('Error occurred.');
+                    }
+                }
+            }
+        });
+        geo.updateLocation();
+
         if (panel.url == undefined || panel.bCargado) return;
 
+        var RUTA_GLOBAL = ''; // 'https://desa.snapcar.com.ar/wappTest/'
         Ext.Ajax.request({
-            url: panel.url,
+            url: RUTA_GLOBAL + panel.url,
             method: 'post',
             success: function (response, opts) {
                 var obj = Ext.decode(response.responseText);
