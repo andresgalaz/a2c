@@ -18,8 +18,8 @@
     "namespace": "A2C",
     "version": "1.0.0.0",
     "framework": "ext",
-    "toolkit": "classic",
-    "theme": "theme-classic",
+    "toolkit": "modern",
+    "theme": "theme-material",
 
     /**
      * The list of required packages (with optional versions; default is "latest").
